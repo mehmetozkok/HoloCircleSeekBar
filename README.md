@@ -24,7 +24,7 @@ dependencies {
 <h2>Documentation</h2>
 To add the widget, you only need to add this to your xml:
 
-    <com.jesusm.holocircleseekbar.lib.HoloCircleSeekBar
+    <com.mehmetozkok.holocircleseekbar.lib.HoloCircleSeekBar
         android:layout_centerInParent="true"
         android:id="@+id/picker"
         android:layout_width="285dp"
