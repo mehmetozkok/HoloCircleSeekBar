@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdk  34
+
+    defaultConfig {
+        applicationId 'com.mehmetoz.holocircleseekbar'
+        minSdkVersion 19
+        targetSdkVersion 34
+        versionCode 1
+        versionName '2'
+        multiDexEnabled = true
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 11
+        targetCompatibility = 11
+    }
+    namespace 'com.jesusm.holocircleseekbar.app'
+ }
+
+
+dependencies {
+    implementation project(':lib')
+
+}

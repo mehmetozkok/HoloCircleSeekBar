@@ -1,0 +1,63 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        agp_version = '8.1.1'
+    }
+    repositories {
+        maven { url "https://jitpack.io" }
+        maven { url "https://jcenter.bintray.com" }
+        maven { url "https://maven.google.com" }
+        google()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$agp_version"
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+        maven { url "https://jcenter.bintray.com" }
+        maven { url "https://maven.google.com" }
+        google()
+    }
+}
+
+ext {
+    versionMajor = 2
+    versionMinor = 2
+    versionPatch = 3
+
+    versionCode = versionMajor * 1000 + versionMinor * 100 + versionPatch
+    versionName = versionMajor + "." + versionMinor + "." + versionPatch
+
+    minSdkVersion = 15
+    targetSdkVersion = 23
+    compileSdkVersion = 34
+ }
+/*
+ext.libraries = [
+        butterknife    : 'com.jakewharton:butterknife:7.0.1',
+        appcompat      : 'com.android.support:appcompat-v7:' + SUPPORT_LIBS_VERSION,
+        supportv4      : 'com.android.support:support-v4:' + SUPPORT_LIBS_VERSION,
+        supportv7      : 'com.android.support:support-v7:' + SUPPORT_LIBS_VERSION,
+        supportv13     : 'com.android.support:support-v13:' + SUPPORT_LIBS_VERSION,
+]
+/*
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.10'
+}*/
+
+
+project.ext.preDexLibs = project.hasProperty('disablePreDex')
+
+subprojects {
+    project.plugins.whenPluginAdded { plugin ->
+        if ("com.android.build.gradle.AppPlugin".equals(plugin.class.name)) {
+            project.android.dexOptions.preDexLibraries = rootProject.ext.preDexLibs
+        } else if ("com.android.build.gradle.LibraryPlugin".equals(plugin.class.name)) {
+            project.android.dexOptions.preDexLibraries = rootProject.ext.preDexLibs
+        }
+    }
+}
