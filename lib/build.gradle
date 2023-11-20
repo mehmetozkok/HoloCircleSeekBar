@@ -1,6 +1,8 @@
-apply plugin: 'com.android.library'
- group='com.github.mehmetozkok'
 apply plugin: 'maven-publish'
+apply plugin: 'com.android.library'
+
+
+group='com.github.mehmetozkok'
 android {
     compileSdk  34
 
