@@ -10,14 +10,13 @@ Import it on your **build.gradle**
 
 ```
 repositories {
-    maven {
-	    url "https://jitpack.io"
-    }
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-    compile 'com.github.mehmetoz:HoloCircleSeekBar:v2.3.2'
-}
+	        implementation 'com.github.mehmetozkok:HoloCircleSeekBar:Tag'
+	}
 ```
 
 
