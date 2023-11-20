@@ -14,9 +14,10 @@ repositories {
 			maven { url 'https://jitpack.io' }
 }
 
+
 dependencies {
 	        implementation 'com.github.mehmetozkok:HoloCircleSeekBar:2.3.2'
-	}
+}
 ```
 
 
