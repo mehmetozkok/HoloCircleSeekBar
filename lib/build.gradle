@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-
+ group='com.github.mehmetozkok'
 android {
     compileSdk  34
 
@@ -20,4 +20,5 @@ android {
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
