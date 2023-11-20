@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.EditText;
 
  import com.mehmetoz.holocircleseekbar.lib.HoloCircleSeekBar;
@@ -28,6 +29,8 @@ public class SampleActivityFragment extends Fragment {
         maxValue.setText(String.valueOf(seekBar.getMaxValue()));
         value = (EditText) rootView.findViewById(R.id.change_value);
         value.setText(String.valueOf(seekBar.getValue()));
+
+
         rootView.findViewById(R.id.change_max_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

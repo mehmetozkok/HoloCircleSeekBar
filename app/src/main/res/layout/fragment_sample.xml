@@ -3,10 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#FFFFFF"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.mehmetoz.holocircleseekbar.SampleActivityFragment">
 
     <com.mehmetoz.holocircleseekbar.lib.HoloCircleSeekBar
@@ -15,10 +16,10 @@
         android:layout_height="290dp"
         android:layout_centerInParent="true"
         app:max="100"
-        app:pointer_color="@color/point_color"
-        app:pointer_halo_color="@color/point_halo_color"
+        app:pointer_color="#651FFF"
+        app:pointer_halo_color="@color/wheel_active_color"
         app:pointer_size="20dp"
-        app:text_color="@color/text_color"
+        app:text_color="#3D5AFE"
         app:text_size="65sp"
         app:wheel_active_color="@color/wheel_active_color"
         app:wheel_unactive_color="@color/wheel_unactive_color" />
@@ -26,8 +27,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,6 +38,7 @@
                 android:id="@+id/change_max_value"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="5px"
                 android:layout_weight="1"
                 android:hint="Enter new max value"
                 android:inputType="number" />
@@ -45,8 +47,13 @@
                 android:id="@+id/change_max_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5px"
                 android:layout_weight="0"
-                android:text="Apply" />
+                android:background="#1976D2"
+                android:text="Apply"
+                android:textColor="#E1F5FE"
+                android:textSize="16sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -64,10 +71,14 @@
 
             <Button
                 android:id="@+id/change_value_button"
-                android:layout_width="wrap_content"
+                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="Apply" />
+                 android:layout_weight="0"
+                android:background="#1976D2"
+                android:text="Apply"
+                android:textColor="#E1F5FE"
+                android:textSize="16sp"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 

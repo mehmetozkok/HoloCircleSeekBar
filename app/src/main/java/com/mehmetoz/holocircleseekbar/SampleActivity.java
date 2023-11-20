@@ -2,7 +2,7 @@ package com.mehmetoz.holocircleseekbar;
 
 import android.app.Activity;
 import android.os.Bundle;
-
+import android.view.WindowManager;
 
 
 public class SampleActivity extends Activity {
@@ -10,6 +10,9 @@ public class SampleActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_sample);
     }
 
