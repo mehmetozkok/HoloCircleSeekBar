@@ -26,14 +26,14 @@ allprojects {
 
 ext {
     versionMajor = 2
-    versionMinor = 2
-    versionPatch = 5
+    versionMinor = 3
+    versionPatch = 2
 
     versionCode = versionMajor * 1000 + versionMinor * 100 + versionPatch
     versionName = versionMajor + "." + versionMinor + "." + versionPatch
 
     minSdkVersion = 15
-    targetSdkVersion = 23
+    targetSdkVersion = 34
     compileSdkVersion = 34
  }
 /*

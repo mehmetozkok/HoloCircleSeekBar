@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.mehmetoz:HoloCircleSeekBar:v2.2.2'
+    compile 'com.github.mehmetoz:HoloCircleSeekBar:v2.3.2'
 }
 ```
 
