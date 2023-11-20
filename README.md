@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-	        implementation 'com.github.mehmetozkok:HoloCircleSeekBar:Tag'
+	        implementation 'com.github.mehmetozkok:HoloCircleSeekBar:2.3.2'
 	}
 ```
 
