@@ -2,6 +2,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'com.android.library'
 
 
+
 group='com.github.mehmetozkok'
 android {
     compileSdk  34
@@ -24,4 +25,13 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'com.github.mehmetozkok'
+            artifactId = 'HoloCircleSeekBar'
+            version = '1.1.1'
+        }
+    }
 }
