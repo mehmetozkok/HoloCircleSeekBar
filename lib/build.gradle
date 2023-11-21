@@ -7,7 +7,16 @@ group='com.github.mehmetozkok'
 android {
     compileSdk  34
 
-
+    project.afterEvaluate {
+        publishing {
+            publications {
+                release(MavenPublication) {
+                    from components.release
+                    artifact androidSourcesJar
+                }
+            }
+        }
+    }
     defaultConfig {
         minSdkVersion parent.ext.minSdkVersion
         targetSdkVersion parent.ext.targetSdkVersion
