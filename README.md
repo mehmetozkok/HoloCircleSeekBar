@@ -16,7 +16,7 @@ repositories {
 
 
 dependencies {
-	        implementation 'com.github.mehmetozkok:HoloCircleSeekBar:2.3.2'
+	        implementation 'com.github.mehmetozkok:HoloCircleSeekBar:1.1.1'
 }
 ```
 
