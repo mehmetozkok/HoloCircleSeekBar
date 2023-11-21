@@ -2,12 +2,12 @@
 <project   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      >
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.larswerkman</groupId>
-    <artifactId>colorpicker</artifactId>
+    <groupId>com.mehmetozkok</groupId>
+    <artifactId>HoloCircleSeekBar</artifactId>
     <packaging>apklib</packaging>
     <name>Holo ColorPicker</name>
-    <description>A Holo themed colorpicker designed by Marie Schweiz and Nick Butcher.</description>
-    <url>https://github.com/LarsWerkman/HoloColorPicker</url>
+    <description>Holo CircleSeekBar.</description>
+    <url>https://github.com/mehmetozkok/HoloCircleSeekBar</url>
     <parent>
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>
