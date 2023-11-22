@@ -1,5 +1,6 @@
 package com.mehmetoz.holocircleseekbar.lib;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -60,7 +61,7 @@ public class HoloCircleSeekBar extends View {
     /**
      * The rectangle enclosing the color wheel.
      */
-    private RectF mColorWheelRectangle = new RectF();
+    private final RectF mColorWheelRectangle = new RectF();
 
     /**
      * {@code true} if the user clicked on the pointer to start the move mode.
@@ -121,7 +122,7 @@ public class HoloCircleSeekBar extends View {
     private int end_wheel;
 
     private boolean show_text = true;
-    private Rect bounds = new Rect();
+    private final Rect bounds = new Rect();
 
     public HoloCircleSeekBar(Context context) {
         super(context);
@@ -191,8 +192,7 @@ public class HoloCircleSeekBar extends View {
 
         if (arc_finish_radians > end_wheel)
             arc_finish_radians = end_wheel;
-        mAngle = calculateAngleFromRadians(arc_finish_radians > end_wheel ? end_wheel
-                : arc_finish_radians);
+        mAngle = calculateAngleFromRadians(Math.min(arc_finish_radians, end_wheel));
         setTextFromAngle(calculateValueFromAngle(arc_finish_radians));
 
         invalidate();
@@ -323,7 +323,7 @@ public class HoloCircleSeekBar extends View {
                     text,
                     (mColorWheelRectangle.centerX())
                             - (textPaint.measureText(text) / 2),
-                    mColorWheelRectangle.centerY() + bounds.height() / 2,
+                    mColorWheelRectangle.centerY() + (float) bounds.height() / 2,
                     textPaint);
 
         // last_radians = calculateRadiansFromAngle(mAngle);
@@ -398,7 +398,7 @@ public class HoloCircleSeekBar extends View {
      * @return the value between 0 and max
      */
     public int getValue() {
-        return Integer.valueOf(text);
+        return Integer.parseInt(text);
     }
 
     public void setMax(int max) {
@@ -428,6 +428,7 @@ public class HoloCircleSeekBar extends View {
         pointerPosition = calculatePointerPosition(mAngle);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         // Convert coordinates to our internal coordinate system
