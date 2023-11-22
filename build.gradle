@@ -38,17 +38,15 @@ ext {
     targetSdkVersion = 34
     compileSdkVersion = 34
  }
-/*
+
 ext.libraries = [
         butterknife    : 'com.jakewharton:butterknife:7.0.1',
-        appcompat      : 'com.android.support:appcompat-v7:' + SUPPORT_LIBS_VERSION,
-        supportv4      : 'com.android.support:support-v4:' + SUPPORT_LIBS_VERSION,
-        supportv7      : 'com.android.support:support-v7:' + SUPPORT_LIBS_VERSION,
-        supportv13     : 'com.android.support:support-v13:' + SUPPORT_LIBS_VERSION,
+        appcompat      : 'com.android.support:appcompat-v7:31.0.0',
+        supportv4      : 'com.android.support:support-v4:31.0.0' ,
+        supportv7      : 'com.android.support:support-v7:31.0.0' ,
+        supportv13     : 'com.android.support:support-v13:31.0.0'
 ]
-/*
-task wrapper(type: Wrapper) {
-    gradleVersion = '1.10'
-}*/
+
+
 
 
