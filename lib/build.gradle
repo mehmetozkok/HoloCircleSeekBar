@@ -1,35 +1,23 @@
-apply plugin: 'maven-publish'
 apply plugin: 'com.android.library'
-group='com.github.mehmetozkok'
+apply from: '../publish.gradle'
 
 android {
-    compileSdk  34
-
+    compileSdk 34
 
     defaultConfig {
-        minSdkVersion parent.ext.minSdkVersion
-        targetSdkVersion parent.ext.targetSdkVersion
-        versionCode 111
-        versionName '1.1.1'
+        minSdk 14
+
+        consumerProguardFiles "consumer-rules.pro"
     }
+
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
-    namespace 'com.mehmetoz.holocircleseekbar'
-}
-
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-}
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            groupId = 'com.github.mehmetozkok'
-            artifactId = 'HoloCircleSeekBar'
-            version = '1.1.1'
-        }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
