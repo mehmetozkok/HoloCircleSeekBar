@@ -26,13 +26,14 @@ dependencies {
 }
 
 
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            groupId = 'com.github.mehmetozkok'
-            artifactId = 'HoloCircleSeekBar'
-            version = '2.4.6'
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'com.github.mehmetozkok'
+                artifactId = 'HoloCircleSeekBar'
+                version = '2.4.6'
+            }
         }
     }
 }
