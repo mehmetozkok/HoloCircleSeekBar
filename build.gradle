@@ -29,9 +29,7 @@ allprojects {
 
 }
 
-tasks.register('clean', Delete) {
-    delete rootProject.build
-}
+
 ext {
     versionMajor = 1
     versionMinor = 1
