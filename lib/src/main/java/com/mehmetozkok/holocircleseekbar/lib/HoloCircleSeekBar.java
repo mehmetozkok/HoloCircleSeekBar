@@ -1,4 +1,4 @@
-package com.mehmetoz.holocircleseekbar.lib;
+package com.mehmetozkok.holocircleseekbar.lib;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

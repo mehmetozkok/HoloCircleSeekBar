@@ -1,8 +1,10 @@
-package com.mehmetoz.holocircleseekbar;
+package com.mehmetozkok.holocircleseekbar;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.WindowManager;
+
+import com.mehmetoz.holocircleseekbar.R;
 
 
 public class SampleActivity extends Activity {

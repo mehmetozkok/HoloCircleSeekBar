@@ -8,7 +8,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
      >
 
-    <com.mehmetoz.holocircleseekbar.lib.HoloCircleSeekBar
+    <com.mehmetozkok.holocircleseekbar.lib.HoloCircleSeekBar
         android:id="@+id/picker"
         android:layout_width="285dp"
         android:layout_height="290dp"

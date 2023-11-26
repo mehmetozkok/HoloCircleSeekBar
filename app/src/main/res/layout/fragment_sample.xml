@@ -8,9 +8,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.mehmetoz.holocircleseekbar.SampleActivityFragment">
+    tools:context="com.mehmetozkok.holocircleseekbar.SampleActivityFragment">
 
-    <com.mehmetoz.holocircleseekbar.lib.HoloCircleSeekBar
+    <com.mehmetozkok.holocircleseekbar.lib.HoloCircleSeekBar
         android:id="@+id/picker"
         android:layout_width="285dp"
         android:layout_height="290dp"

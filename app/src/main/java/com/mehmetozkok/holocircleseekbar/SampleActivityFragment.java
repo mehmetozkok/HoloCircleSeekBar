@@ -1,4 +1,4 @@
-package com.mehmetoz.holocircleseekbar;
+package com.mehmetozkok.holocircleseekbar;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -6,10 +6,10 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.EditText;
 
- import com.mehmetoz.holocircleseekbar.lib.HoloCircleSeekBar;
+import com.mehmetoz.holocircleseekbar.R;
+import com.mehmetozkok.holocircleseekbar.lib.HoloCircleSeekBar;
 
 public class SampleActivityFragment extends Fragment {
 
