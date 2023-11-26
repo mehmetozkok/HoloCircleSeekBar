@@ -290,8 +290,7 @@ public class HoloCircleSeekBar extends View {
 
     }
 
-    @Override
-    protected void onDraw(Canvas canvas) {
+     protected void onDraw(Canvas canvas) {
         // All of our positions are using our internal coordinate system.
         // Instead of translating
         // them we let Canvas do the work for us.
@@ -330,8 +329,7 @@ public class HoloCircleSeekBar extends View {
 
     }
 
-    @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int height = getDefaultSize(getSuggestedMinimumHeight(),
                 heightMeasureSpec);
         int width = getDefaultSize(getSuggestedMinimumWidth(), widthMeasureSpec);
@@ -428,8 +426,8 @@ public class HoloCircleSeekBar extends View {
         pointerPosition = calculatePointerPosition(mAngle);
     }
 
+
     @SuppressLint("ClickableViewAccessibility")
-    @Override
     public boolean onTouchEvent(MotionEvent event) {
         // Convert coordinates to our internal coordinate system
         float x = event.getX() - mTranslationOffset;
@@ -552,8 +550,7 @@ public class HoloCircleSeekBar extends View {
         return new float[]{x, y};
     }
 
-    @Override
-    protected Parcelable onSaveInstanceState() {
+     protected Parcelable onSaveInstanceState() {
         Parcelable superState = super.onSaveInstanceState();
 
         Bundle state = new Bundle();
@@ -563,8 +560,7 @@ public class HoloCircleSeekBar extends View {
         return state;
     }
 
-    @Override
-    protected void onRestoreInstanceState(Parcelable state) {
+     protected void onRestoreInstanceState(Parcelable state) {
         Bundle savedState = (Bundle) state;
 
         Parcelable superState = savedState.getParcelable(STATE_PARENT);
