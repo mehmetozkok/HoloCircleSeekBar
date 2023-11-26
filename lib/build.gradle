@@ -9,8 +9,6 @@ android {
     defaultConfig {
         minSdkVersion parent.ext.minSdkVersion
         targetSdkVersion parent.ext.targetSdkVersion
-        versionCode 111
-        versionName '1.1.1'
     }
     buildTypes {
         release {
