@@ -26,13 +26,14 @@ dependencies {
 
 
 }
-publishing {
-    publications {
-        // Creates a Maven publication called "release".
-        release(MavenPublication) {
+afterEvaluate {
+    publishing {
+        publications {
+            productionRelease(MavenPublication) {
+                from components.findByName('release')
             groupId = 'com.github.mehmetozkok'
             artifactId = 'HoloCircleSeekBar'
             version = '2.4.1'
         }
-    }
+    }}
 }
