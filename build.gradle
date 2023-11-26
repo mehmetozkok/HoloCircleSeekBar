@@ -9,10 +9,11 @@ buildscript {
         maven { url "https://jcenter.bintray.com" }
         maven { url "https://maven.google.com" }
         google()
+        mavenCentral()
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$agp_version"
-       // classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1' // Add this line
+       classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
 
@@ -22,11 +23,15 @@ allprojects {
         maven { url "https://jcenter.bintray.com" }
         maven { url "https://maven.google.com" }
         google()
+        mavenCentral()
     }
 
 
 }
 
+tasks.register('clean', Delete) {
+    delete rootProject.build
+}
 ext {
     versionMajor = 1
     versionMinor = 1

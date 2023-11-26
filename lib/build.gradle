@@ -1,7 +1,7 @@
 apply plugin: 'maven-publish'
 apply plugin: 'com.android.library'
 group='com.github.mehmetozkok'
-
+version = '1.0'
 android {
     compileSdk  34
 
@@ -9,6 +9,8 @@ android {
     defaultConfig {
         minSdkVersion parent.ext.minSdkVersion
         targetSdkVersion parent.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
     }
     buildTypes {
         release {
@@ -21,13 +23,16 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
 }
 publishing {
     publications {
-        mavenJava(MavenPublication) {
+        // Creates a Maven publication called "release".
+        release(MavenPublication) {
             groupId = 'com.github.mehmetozkok'
             artifactId = 'HoloCircleSeekBar'
-            version = '1.1.1'
+            version = '2.4.1'
         }
     }
 }

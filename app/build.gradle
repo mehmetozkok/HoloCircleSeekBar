@@ -8,7 +8,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 34
         versionCode 1
-        versionName '1.1.1'
+        versionName '2.4.1'
 
     }
     buildTypes {
@@ -21,7 +21,7 @@ android {
         sourceCompatibility = 11
         targetCompatibility = 11
     }
-    namespace 'com.jesusm.holocircleseekbar.app'
+    namespace 'com.mehmetoz.holocircleseekbar'
  }
 
 
