@@ -1,9 +1,5 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
-    ext {
-        agp_version = '8.1.4'
-    }
+
     repositories {
         maven { url "https://jitpack.io" }
         maven { url "https://jcenter.bintray.com" }
@@ -12,7 +8,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:$agp_version"
+        classpath "com.android.tools.build:gradle:8.1.4"
        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
@@ -29,7 +25,7 @@ allprojects {
 
 }
 
-
+/*
 ext {
     versionMajor = 1
     versionMinor = 1
@@ -42,7 +38,7 @@ ext {
     targetSdkVersion = 34
     compileSdkVersion = 34
  }
-
+*/
 ext.libraries = [
         butterknife    : 'com.jakewharton:butterknife:7.0.1',
         appcompat      : 'com.android.support:appcompat-v7:31.0.0',
